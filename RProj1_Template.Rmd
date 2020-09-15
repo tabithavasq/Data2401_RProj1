@@ -17,13 +17,10 @@ library(datasauRus)
 
 ### Exercise 1
 
-(Type your answer to Exercise 1 here. This exercise does not require any R code. **Remove notes like this in the final product that you turn in**)
+(Datasaurus Dozen data has 1846 rows, 3 variables, and the amount of columns depends on how many the user adds. The variables included in the data frame are if, ggplot, geom_point, theme_void, theme, and facet_wrap.)
 
 ### Exercise 2
 
-(The answers for this Exercise are given for you below. But you should clean up some of the narrative so that it only includes what you want to turn in.)
-
-First let's plot the data in the dino dataset:
 
 ```{r plot-dino, fig.height=3, fig.width=6}
 dino_data <- datasaurus_dozen %>%
@@ -32,12 +29,18 @@ ggplot(data = dino_data, mapping = aes(x = x, y = y)) +
   geom_point()
 ```
 
-And next calculate the correlation between `x` and `y` in this dataset:
 
 ```{r cor-dino}
 dino_data %>%
   summarize(r = cor(x, y))
 ```
+
+dino_data %>%
+summarize(r = cor(x,y))
+## # A tibble: 1 x 1
+## r
+## <dbl>
+## 1 -0.0645
 
 ### Exercise 3
 
