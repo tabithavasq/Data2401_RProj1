@@ -9,7 +9,7 @@ output:
     highlight: pygments
 ---
 
-MAKE SURE YOU READ AND FOLLOW **ALL** INSTRUCTIONS ON THE INSTRUCTION DOCUMENT. 
+ 
 
 ### Load packages
 
