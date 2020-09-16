@@ -44,21 +44,29 @@ summarize(r = cor(x,y))
 
 ### Exercise 3
 
-(Add code and narrative as needed. Note that the R chunks are labeled with `plot-star` and `cor-star` to provide spaces to place the code for plotting and calculating the correlation coefficient. To finish, remember to clean up the narrative by removing these instructions.)
+Plotting of star dataset
+
+{r plot-star}
+star_data <- datasaurus_dozen %>%
+filter(dataset == "dino")
+
+ggplot(data = start_data, mapping = aes(x = x, y = y)) +
+geom_point()
 
 
+Correlation of star dataset
 
-```{r plot-star}
+{r cor-star}
+star_data %>%
+  summarize(r = cor(x, y))
 
+star_data %>%
+summarize(r = cor(x,y))
+## # A tibble: 1 x 1
+## r
+## <dbl>
+## 1 -0.0645
 
-```
-
-I'm some text, you should replace me with more meaningful text...
- 
-```{r cor-star}
-
-
-```
 
 ### Exercise 4
 
