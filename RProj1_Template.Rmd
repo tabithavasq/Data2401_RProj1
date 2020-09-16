@@ -2,7 +2,11 @@
 title: "R Project 1 - Hello R"
 author: "Tabitha Vasquez"
 date: "9/16/2020"
-output: html_document
+output: 
+  html_document: 
+    fig_width: 5
+    fig_height: 3
+    highlight: pygments
 ---
 
 MAKE SURE YOU READ AND FOLLOW **ALL** INSTRUCTIONS ON THE INSTRUCTION DOCUMENT. 
@@ -46,17 +50,17 @@ summarize(r = cor(x,y))
 
 Plotting of star dataset
 
-{r plot-star}
+```{r plot-star}
 star_data <- datasaurus_dozen %>%
 filter(dataset == "dino")
 
 ggplot(data = start_data, mapping = aes(x = x, y = y)) +
 geom_point()
-
+```
 
 Correlation of star dataset
 
-{r cor-star}
+```{r cor-star}
 star_data %>%
   summarize(r = cor(x, y))
 
@@ -66,20 +70,20 @@ summarize(r = cor(x,y))
 ## r
 ## <dbl>
 ## 1 -0.0645
-
+```
 
 ### Exercise 4
 
 (Add code and narrative as needed. Note that two R chunks are given but they are not labeled. Use the convention from above to name them appropriately.)
 
-{r plot-circl}
+```{r plot-circl}
 circle_data <- datasaurus_dozen %>%
 filter(dataset == "dino")
 
 ggplot(data = circle_data, mapping = aes(x = x, y = y)) +
 geom_point()
-
-{r cor-circle}
+```
+```{r cor-circle}
 circle_data %>%
   summarize(r = cor(x, y))
 
@@ -89,7 +93,7 @@ summarize(r = cor(x,y))
 ## r
 ## <dbl>
 ## 1 -0.0645
-
+```
 
 
 ### Exercise 5
